@@ -1,47 +1,61 @@
+
 # Dumbways-DO-B14---Abdul-Aziz-Marifudin
 Dumbways Devops Task 1 - Abdul Aziz marifudin
 
-Apa itu DevOps?
+**Apa itu DevOps?**
 Devops adalah gabungann dari Development dan IT Operation, Dimana penghubung antara divisi Developer dan IT Operation.Dimana merupakan kombinasi dari kultur,praktik, dan tools. yang membuat kolaborasi dan efisiensi dalam kerjasama team antara Developer dan IT Operation
 
-DevOps LifeCycle
+**DevOps LifeCycle**
 Apa yg di makusd dengan DevOps Lifecycle? Merupakan tahapan-tahapan ketika mengembangkan sebuah aplikasi.
 
-Tahapan apa saja pada DevOps LifeCycle?
+**Apa saja tahapan DevOps LifeCycle?**
 Code >> Build >> Test >> Release >> Deploy
  
 ![image](https://user-images.githubusercontent.com/56806850/201646351-fc77500f-7186-49d6-802f-7d59d7de7440.png)
 
-Code 
+**Code**
 Pada tahapan ini Developer menulis dan mengembangkan Code aplikasi dalam berbagai bahasa.
 
-Build 
+**Build**
 setelah kode aman dan siap di gunakan lalu kode tersebut di eksekusi melalui proses build, atau di rubah dari bentuk kode menjadi aplikasi yang bisa di gunakan
 
-Test
+**Test**
 Pada tahapan ini aplikasi di uji coba (Test).Di uji fungsional,kinerja,desain,keamanan
 
-Release
+**Release**
 Lalu setelah dilakukan pengujian masuk pada tahap perilisan. dimana dikemas dengan nomor versi perilisan. nomor versi perilisan menunjukan suatu perubahan pada aplikasi di tiap nomor versi periisan.
 
-Deploy
+**Deploy**
 Masuk ke tahap akhir yaitu Deploy aplikasi ke environment/lingkunan ke server hingga siap di gunakan. meski masih dalam tahap test, staging (tempat di mana masih banyak perubahan), alpha,beta, atau production
 
 
-Instalasi Ubuntu Server 20.04 LTS
+# Instalasi Ubuntu Server 20.04 LTS
 
 Pada instalasi Ubuntu Server ini saya akan menggunakan aplikasi VM.
 Yaitu Virtual Box Versi 6.1.40 yang bisa di download secara Free
 
 
-Bahan Instalasi
+**Bahan Instalasi**
  
-Virutal Box 6.1.40 - Link Download https://www.virtualbox.org/wiki/Download_Old_Builds_6_1 
+- Virutal Box 6.1.40 -[ Link Download ](https://www.virtualbox.org/wiki/Download_Old_Builds_6_1  " Link Download ")
 
 
-Ubuntu Server 20.04.1 - Link Download https://ubuntu.com/download/server
+- Ubuntu Server 20.04.1 - [Link Download]( https://ubuntu.com/download/server "Link Download")
 
-Tahap 1 - Menyiapkan Virtual Box
+
+------------
+
+
+
+### Tahap 1 - Menyiapkan Virtual Box
+
+Pengaturan virtual box yang akan di gunakan 
+
+- CPU : 2 Core 
+- Memmory : 2 GB
+- Disk : 10 GB
+- Network adapter : Bridge adapter
+
 ![image](https://user-images.githubusercontent.com/56806850/201662603-d66d8994-f8e3-405b-88eb-2ec664727169.png)
 
 Buka Aplikasi Virtual Box yang sudah di install lalu tekan tombol New seperti gambar di atas.
@@ -94,7 +108,12 @@ Disk Ubuntu sudah terpasang, lalu kita bisa lanjut ke langkah berikutnya
 
 Virtual box siap untuk di luncurkan . Lalu klik tombol start
 
-Tahap 2 - Installasi Ubuntu Server
+------------
+
+
+### Tahap 2 - Installasi Ubuntu Server
+
+
 
 Setelah menekan tombol start akan muncul pilihan pertama, pilih yang paling atas. 
 
@@ -134,10 +153,10 @@ lalu pilih Manual.
 
 isi seperti berikut 
 
-Subnet : 192.168.1.0/24
-Address : 192.168.1.6
-Gateway : 192.168.1.1
-Name Server : 8.8.8.8
+- Subnet : 192.168.1.0/24
+- Address : 192.168.1.6
+- Gateway : 192.168.1.1
+- Name Server : 8.8.8.8
 
 Lalu save 
 
@@ -156,6 +175,11 @@ Mirror addresss kita pilih yg paling atas dan tekan enter
 ![image](https://user-images.githubusercontent.com/56806850/201692279-baee52b5-847a-4c30-a724-ec3949c62b3f.png)
 
 untuk storage kita custom storage layout. arahkan tandaa X ke bawah bagian custom storage layou dengan menekan keyboard arah bawah dan tekan enter. lalu tekan done
+
+Pada custom storage kita akan membuat partisi sebagai berikut 
+
+- Swap : 2 GB
+- Root : 8 GB
 
 ![image](https://user-images.githubusercontent.com/56806850/201692585-08880142-8feb-440a-ac0a-20f5db1ab900.png)
 ![image](https://user-images.githubusercontent.com/56806850/201692709-b07d0f8c-6903-4bc3-a11f-807d97c01ef5.png)
@@ -178,6 +202,7 @@ Lalu kita tambahkan partisi root untuk penyimpanan
 lalu kita check kembali partisi disk yang kita buat, jika sudah seperti di atas kita bisa lanjutkan ke tahap berikutnya.
 
 ![image](https://user-images.githubusercontent.com/56806850/201694946-33be35bb-361e-44f6-9461-e552430fe0f2.png)
+
 Kemudian isi data anda, seperti nama, server name, username, dan password. setelah itu lanjut berikutnya.
 
 ![image](https://user-images.githubusercontent.com/56806850/201695348-6146bab0-1205-4fd7-b798-e20d5fd5d0b8.png)
@@ -192,22 +217,33 @@ Untuk featured tambahan kita lewati saja dan langsung tekan tombol done.
 
 Tunggu proses installasi selesai.
 
+
+>  **Jika terjadi Error disable CD-Room, maka kita harus mencopot ISO ubuntu server kita di bagian settings. Close terlebih dahulu dan matikan VMbox.**
+
 ![image](https://user-images.githubusercontent.com/56806850/201702507-809a7587-00dd-4cc5-979b-fc1baec2f968.png)
 ![image](https://user-images.githubusercontent.com/56806850/201702630-f44a948e-fc92-4266-b822-f7084f8fd95e.png)
 
 
-jika terjadi Error disable CD-Room, maka kita harus mencopot ISO ubuntu server kita di bagian settings. Close terlebih dahulu dan matikan VMbox.
+Lalu kita remove CD/DVD installasi ubuntu
+
+Masuk ke settings dan remove ISO Ubuntu. setelah itu kita start lagi VM Ubuntu nya.
+Lalu start kembali
+
 
 ![image](https://user-images.githubusercontent.com/56806850/201702777-9cfd46ba-d248-44eb-a07b-3f1842fcfabd.png)
- 
- masuk ke settings dan remove ISO Ubuntu. setelah itu kita start lagi VM Ubuntu nya.
+
+Setelah itu kita reboot Virtual Machine kita
 
 ![image](https://user-images.githubusercontent.com/56806850/201703116-871d6657-f217-468e-af72-0b83668f6818.png)
 
-Ubuntu telah berhasil di install.
+**Ubuntu telah berhasil di install.**
 
 ![image](https://user-images.githubusercontent.com/56806850/201702181-c9381764-e27a-4c60-8b89-5e60d9c40ef4.png)
 
 
 Kita coba mengetest koneksi internet dengan ping ke google.com, dan Instalasi selesai
+
+```shell
+    ping google.com    
+```
 
