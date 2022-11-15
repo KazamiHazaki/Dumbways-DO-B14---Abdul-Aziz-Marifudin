@@ -3,29 +3,37 @@
 Dumbways Devops Task 1 - Abdul Aziz marifudin
 
 **Apa itu DevOps?**
+
 Devops adalah gabungann dari Development dan IT Operation, Dimana penghubung antara divisi Developer dan IT Operation.Dimana merupakan kombinasi dari kultur,praktik, dan tools. yang membuat kolaborasi dan efisiensi dalam kerjasama team antara Developer dan IT Operation
 
 **DevOps LifeCycle**
+
 Apa yg di makusd dengan DevOps Lifecycle? Merupakan tahapan-tahapan ketika mengembangkan sebuah aplikasi.
 
 **Apa saja tahapan DevOps LifeCycle?**
+
 Code >> Build >> Test >> Release >> Deploy
  
 ![image](https://user-images.githubusercontent.com/56806850/201646351-fc77500f-7186-49d6-802f-7d59d7de7440.png)
 
 **Code**
+
 Pada tahapan ini Developer menulis dan mengembangkan Code aplikasi dalam berbagai bahasa.
 
 **Build**
+
 setelah kode aman dan siap di gunakan lalu kode tersebut di eksekusi melalui proses build, atau di rubah dari bentuk kode menjadi aplikasi yang bisa di gunakan
 
 **Test**
+
 Pada tahapan ini aplikasi di uji coba (Test).Di uji fungsional,kinerja,desain,keamanan
 
 **Release**
+
 Lalu setelah dilakukan pengujian masuk pada tahap perilisan. dimana dikemas dengan nomor versi perilisan. nomor versi perilisan menunjukan suatu perubahan pada aplikasi di tiap nomor versi periisan.
 
 **Deploy**
+
 Masuk ke tahap akhir yaitu Deploy aplikasi ke environment/lingkunan ke server hingga siap di gunakan. meski masih dalam tahap test, staging (tempat di mana masih banyak perubahan), alpha,beta, atau production
 
 
