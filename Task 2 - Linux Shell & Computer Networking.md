@@ -66,3 +66,21 @@ jika sudah muncul halaman seperti di atas maka, apache2 sukses di install.
 
 Jika ingin mengubah tampilan apache2 menjadi sesuai keinginan kita, maka kita harus merubah file yang ada pada `/var/www/html` 
 
+```shell
+sudo echo "<html> Abdul Aziz </html>" /var/www/html/index.html
+```
+lalu check file index.html dengan `cat` command
+
+```shell
+cat /var/www/html/index.html
+```
+![image](https://user-images.githubusercontent.com/56806850/202318417-a4e210b5-5d4e-417d-87fa-86b924e48752.png)
+
+lalu kita bisa check pada web browser 
+
+![image](https://user-images.githubusercontent.com/56806850/202318486-deeffee9-009f-44a2-8d33-0863d341db9d.png)
+
+
+
+
+
