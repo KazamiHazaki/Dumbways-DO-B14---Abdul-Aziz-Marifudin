@@ -51,8 +51,130 @@ lalu jalankan
 npm run start
 ```
 
+![image](https://user-images.githubusercontent.com/56806850/202355989-c952a02e-a8d9-46a4-accc-04c100cf608c.png)
+
+![image](https://user-images.githubusercontent.com/56806850/202355971-0909306a-f08f-4840-a90b-8e22faaec144.png)
+
+
+
 dan website wayshub-frontend telah berjalan menggunakan node.js
 ![image](https://user-images.githubusercontent.com/56806850/202340094-0dc7c736-343e-4c44-a7dd-9ef5f047257b.png)
+
+
+Install PM2
+
+PM2 adalah proses manager node.js jdi kita bisa mengatur aplikasi node.js kita menggunakan PM2
+
+
+```shell
+npm install pm2 -g
+```
+![image](https://user-images.githubusercontent.com/56806850/202356496-c5cd4c5d-f386-49dc-9303-b2011b74d2a3.png)
+
+
+cek sudah terinstall atau belum  dengan `pm2 -v`
+
+![image](https://user-images.githubusercontent.com/56806850/202356663-3037955f-e18b-4835-be68-3ac27b832d60.png)
+
+
+lalu kita jalankan dengan pm2
+kita menggunakan `pm2 start "bash command'
+
+maka untuk mendeploy ndoe js wayshub commandnya seperti ini 
+
+```shell
+pm2 start "npm run start" --name dumbways-web
+```
+
+![image](https://user-images.githubusercontent.com/56806850/202361753-41981119-08c4-408a-9408-f670b519f880.png)
+
+
+mendeploy website menggunakan golang
+
+pertama kita install terlebih dahulu package golang
+
+download package terlebih dahulu
+
+```shell
+curl -OL https://golang.org/dl/go1.16.7.linux-amd64.tar.gz
+```
+![image](https://user-images.githubusercontent.com/56806850/202364574-d8fd501b-f974-469a-9e4a-313682f45660.png)
+
+setelah itu kita extract ke folder `/usr/local`
+
+```shell
+sudo tar -C /usr/local -xvf go1.16.7.linux-amd64.tar.gz
+```
+![image](https://user-images.githubusercontent.com/56806850/202364899-cb475e27-abd0-4e47-879d-7b5da745ea14.png)
+
+setelah extract selesai kita atur agar command go bisa di gunakan pada CLI kita dengan menambahkan path `/usr/local/go/bin` ke `~/.profile`
+
+```shell
+sudo nano ~/.profile 
+```
+
+lalu masukan `export PATH=$PATH:/usr/local/go/bin'  pada barisan bawah sendiri`
+
+![image](https://user-images.githubusercontent.com/56806850/202366142-9d715f7b-2ed3-4870-ab8a-baa0d2a6d594.png)
+
+setelah itu kita restart profile 
+```shell
+source ~/.profile
+```
+![image](https://user-images.githubusercontent.com/56806850/202366552-50d5b1b4-b44f-4219-a820-8b53cd8da2be.png)
+
+
+
+
+setelah itu kita check instalasi kita menggunakan `go version`
+![image](https://user-images.githubusercontent.com/56806850/202366640-68a98c42-4038-4013-b332-923a3daa0941.png)
+
+Go language telah berhasil di install. langkah berikutnya kita settings golang agar bisa membuka website project kita.
+
+selanjutnya kita membuat file yang akan di depol untuk tampilan websitenya
+
+pertama kita masuk ke direktori go yang berada pada `/usr/local/go/bin`
+
+buat direktori baru dan ubah akses direktory tersebut
+
+```shell
+sudo mkdir hello-world && cd hello-world
+```
+
+![image](https://user-images.githubusercontent.com/56806850/202369924-a6b6d744-8946-4c4b-bf24-d6b3e6de9dfc.png)
+
+setelah itu kita ubah akses menjadi 777
+![image](https://user-images.githubusercontent.com/56806850/202371654-262b5bcb-8748-4688-81e2-13589382f8a8.png)
+
+![image](https://user-images.githubusercontent.com/56806850/202371672-d99bb74e-8c35-456c-9c5d-de53b592eadd.png)
+
+
+lalu buat file go, pertama kita gunakan direktori sekarang sebagai module menggunakan command di bawah 
+
+```shell 
+go mod init mytask/hello-world
+```
+![image](https://user-images.githubusercontent.com/56806850/202371769-16549608-b75c-4775-a775-27c2a8493025.png)
+
+lalu kita buat file go
+
+```shell
+nano hello.go
+```
+
+masukan command di bawah pada file hello.go
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}```
+
+
+
 
 
 
