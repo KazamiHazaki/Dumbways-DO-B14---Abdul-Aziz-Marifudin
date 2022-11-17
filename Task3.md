@@ -173,9 +173,103 @@ func main() {
     fmt.Println("Hello, World!")
 }```
 
+lalu kita jalankan golang yg sudah di buat dengan command 
+
+```shell
+go run hello.go
+```
+
+![image](https://user-images.githubusercontent.com/56806850/202487977-e7cac140-6974-4a59-b7bf-a0217024677e.png)
+
+jika ingin di build aplikasi tersebut maka gunakan 
+
+```shell
+go build hello.go
+```
+
+maka setelah di build akan muncul file baru `hello`
+
+
+![image](https://user-images.githubusercontent.com/56806850/202488583-82ffb075-e994-4747-acab-21a3b1ac00ac.png)
+
+
+kita bisa langsung mengeksekusi file tersebut tanpa menggunakan `go run hello.go`
+
+run menggunakan 
+
+```shell
+./hello
+```
+
+![image](https://user-images.githubusercontent.com/56806850/202489006-91f3e87c-b2ea-4589-9391-c0095ac1ffcd.png)
 
 
 
 
+Install python3
+
+
+pertama kita update terlebih dahulu 
+![image](https://user-images.githubusercontent.com/56806850/202490902-79e18b6a-43ae-4386-ba18-a22ac6f56b61.png)
+
+secara default python3 sudah terinstall pada ubuntu. maka kita bisa langsung saja check python3 dengan command berikut
+
+```shell
+python3 -V
+
+```
+
+![image](https://user-images.githubusercontent.com/56806850/202491685-9d7edb18-6815-4005-9f27-11377e8c79af.png)
+
+lalu kita install pip package manager python3
+
+```shell
+sudop apt install python3-pip
+```
+
+setelah itu kita instal flask, flask adalah web framework yg ada pada python3, apa itu framework? framework adalah kerangka kerja yg sudah dibuat secara rapih dan mudah, sehingga membuat kinerja kita lebih efisien.
+
+Install flask
+```shell
+pip install flask
+````
+
+![image](https://user-images.githubusercontent.com/56806850/202493078-9f9a56e9-c160-4ab3-9489-613517feab14.png)
+
+
+setelah framewok flask terinstall mari kita buat file untuk websitenya
+
+```shell
+nano index.py
+````
+isi dengan konten berikut
+
+```python3
+from flask import Flask
+app = Flask(__name__)
+@app.route("/")
+def helloworld():
+    return "Abdul Aziz Marifudin"
+if __name__ == "__main__":
+    app.run()
+```
+
+
+![image](https://user-images.githubusercontent.com/56806850/202496402-14b84463-cfe4-40dc-8d41-cd5edae865be.png)
+
+
+
+lalu kita jalankan menggunakan python
+
+```shell
+python3 index.py
+```
+lalu kita akan di beri halaman web dengan port 5000
+
+![image](https://user-images.githubusercontent.com/56806850/202496768-d3f7619c-150b-42a8-8a19-cc20d47c2fac.png)
+
+maka web dengan python3 berhasil di buat
+
+![image](https://user-images.githubusercontent.com/56806850/202496588-1a2d11a2-369a-4702-950a-e25a1b928174.png)
 
 
