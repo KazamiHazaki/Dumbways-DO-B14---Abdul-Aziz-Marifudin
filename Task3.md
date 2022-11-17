@@ -170,18 +170,26 @@ package main
 import "fmt"
 
 func main() {
-    fmt.Println("Hello, World!")
-}```
+    fmt.Println("Abdul Aziz Marifudin")
+}
+```
+
+
+![image](https://user-images.githubusercontent.com/56806850/202497396-e0aae030-a90d-4b66-95b1-04827b8bbc8e.png)
+
 
 lalu kita jalankan golang yg sudah di buat dengan command 
 
 ```shell
 go run hello.go
 ```
+lalu kita run maka hasilnya akan seperti berikut.
 
-![image](https://user-images.githubusercontent.com/56806850/202487977-e7cac140-6974-4a59-b7bf-a0217024677e.png)
+![image](https://user-images.githubusercontent.com/56806850/202497471-770d3c95-b747-420c-8633-af15f66911e3.png)
 
-jika ingin di build aplikasi tersebut maka gunakan 
+
+jika sudah tidak ada perubahan pada aplikasi, maka bisa kita build menjadi 1 file yg bisa di eksekusi
+
 
 ```shell
 go build hello.go
@@ -189,8 +197,9 @@ go build hello.go
 
 maka setelah di build akan muncul file baru `hello`
 
+![image](https://user-images.githubusercontent.com/56806850/202498064-868f937c-cb1f-4165-a744-a9536f0baa18.png)
 
-![image](https://user-images.githubusercontent.com/56806850/202488583-82ffb075-e994-4747-acab-21a3b1ac00ac.png)
+
 
 
 kita bisa langsung mengeksekusi file tersebut tanpa menggunakan `go run hello.go`
@@ -201,7 +210,6 @@ run menggunakan
 ./hello
 ```
 
-![image](https://user-images.githubusercontent.com/56806850/202489006-91f3e87c-b2ea-4589-9391-c0095ac1ffcd.png)
 
 
 
