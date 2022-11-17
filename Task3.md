@@ -88,6 +88,44 @@ pm2 start "npm run start" --name dumbways-web
 
 ![image](https://user-images.githubusercontent.com/56806850/202361753-41981119-08c4-408a-9408-f670b519f880.png)
 
+Membuat server lokal bisa di akses di internet dengan LocalTunnel
+
+install menggunakan NPM
+
+```shell
+npm install -g localtunnel
+```
+
+![image](https://user-images.githubusercontent.com/56806850/202499534-529efec3-d379-49f8-ab61-0061b82689d4.png)
+
+kita check terlebih dahulu pada PM2 yg sudah kita buat
+
+![image](https://user-images.githubusercontent.com/56806850/202500451-38183fd3-fe9a-437a-bcc7-2ceedff5a6a0.png)
+
+jika tidak ada yg berjalan maka gunakan 
+
+```shell
+pm2 start "npm run start"
+```
+![image](https://user-images.githubusercontent.com/56806850/202500832-062f6f15-2409-4687-8f48-1a26f6e12568.png)
+
+
+setelah web app berjalan kita lakukan pada localtunnel
+untuk menggunakan localtunnel kita hanya perlu menjalankannya sesuai port pada node.js kita
+
+```shell
+lt --port 3000
+```
+![image](https://user-images.githubusercontent.com/56806850/202500922-74b2123d-2f2e-4d87-98b8-415a63c4d309.png)
+
+hasil akses pada lokal komputer pada jaringan yang sama 
+![image](https://user-images.githubusercontent.com/56806850/202501971-6b906b67-402f-4636-9737-5ebc949980a1.png)
+
+uji coba pada android berbeda jaringan
+
+![image](https://user-images.githubusercontent.com/56806850/202502073-5dc12212-6190-4fdf-9121-9076efb9934e.png)
+
+
 
 mendeploy website menggunakan golang
 
