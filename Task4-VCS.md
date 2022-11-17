@@ -40,4 +40,12 @@ dan cek IP kita sudah berubah atau belum menggunakan `Hostname -I`
 ![image](https://user-images.githubusercontent.com/56806850/202521529-3a63eb71-f0f6-42a9-8db8-a02236fd7099.png)
 
 
+dan kita coba koneksi dengan SSH pada host windows
+
+![image](https://user-images.githubusercontent.com/56806850/202521893-fe2de2a5-88d2-4e82-85d5-9deca2b51672.png)
+
+SSH berhasil terhubung dengan ubuntu server pada VM
+
+![image](https://user-images.githubusercontent.com/56806850/202522011-bc4b649c-2bb8-4a4b-a938-e68e109f22c6.png)
+
 
