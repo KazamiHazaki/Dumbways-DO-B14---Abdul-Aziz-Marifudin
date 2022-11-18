@@ -1,4 +1,9 @@
 
+Apa itu GIT?
+Git adalah version control system. yg di maksud version control system adalah aplikasi  untuk mengontrol setiap perubahan yg ada pada aplikasi, dari tahap pembuatan aplikasi hingga update aplikasi ketika sudah di rilis ke publik
+
+
+
 Setelah login ke VM
 masuk ke direktori dan cek file yg ada di direktori tersebut
 
