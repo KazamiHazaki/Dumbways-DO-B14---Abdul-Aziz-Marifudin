@@ -49,3 +49,5 @@ SSH berhasil terhubung dengan ubuntu server pada VM
 ![image](https://user-images.githubusercontent.com/56806850/202522011-bc4b649c-2bb8-4a4b-a938-e68e109f22c6.png)
 
 
+Check hostname VM
+![image](https://user-images.githubusercontent.com/56806850/202593922-ddecddce-b9f2-4ac0-b03f-f7498e2d7c3d.png)
