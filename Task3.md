@@ -1,3 +1,14 @@
+Apa itu monolith dan microservices
+
+Microservices
+
+Monolith adalah infrastruktur aplikasi dimana layanannya hanya satu service saja, yang menggunakan satu server sesuai kebutuhan aplikasi tersebut, ketika ada kendala padaa layanan maka keseluruhan aplikasi tidak dapat di akses
+
+Microservices
+
+sedangkan microservices struktur aplikasi nya terbagi bagi secara terpisah, jadi ketika ada kendala di bagian pembayaran misal, layanan utama tidak mati seketika, hanya layanan pembayaran saja yg mati. 
+
+Install node
 
 pertama install NodeSource PPA  
 
