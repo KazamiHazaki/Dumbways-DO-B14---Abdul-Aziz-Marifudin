@@ -76,5 +76,51 @@ setelah deployment selesai maka perubahan tersebut langsung di update pada websi
  yang sebelumnya bertitle `Fadhil Darma` berubah menjadi nama saya.
  
  
+ Deploy 2 branch berbeda 
  
+ pertama buat terlebih dahulu branch tersebut 
+ 
+ ![image](https://user-images.githubusercontent.com/56806850/202988455-01d0d263-593d-4716-96a9-d5fcf1ba3282.png)
+
+lalu setelah membuat 2 branch tambahan kita ubah pengaturan pada website cloudflare. Masuk ke bagian settings 
+
+![image](https://user-images.githubusercontent.com/56806850/202991885-36db565c-fc08-4f54-9625-f77613f22ea6.png)
+
+lalu ke tab Builds & Deployments 
+
+![image](https://user-images.githubusercontent.com/56806850/202991951-85281836-2c5b-46aa-b64e-b23d1dcf1a46.png)
+
+
+pada preview branch rubah dari `All non-Production branches` menjadi custom branches. kemudian tambahkan branch yang sudah di buat pada repo dumbflix yaitu branch ` Developement` & `Staging`
+
+![image](https://user-images.githubusercontent.com/56806850/202992174-bd2369e7-f311-400c-8503-a68351553af7.png)
+
+
+kembali lagi pada tab deployments dumbflix pada cludflare pages setelah membuat 2 tambahan branch pada repository dumbflix cloudflare secara otomatis juga menambahkan branch tersebut ke cloudflare pages 
+
+![image](https://user-images.githubusercontent.com/56806850/202992522-28f7052d-e35f-4491-9748-bedcf9128a77.png)
+
+ketika menekan tombol view details pada salah satu branch yg sudah di update pada cloudflare pages maka branch baru akan mendapatkan domain tersendiri jika pada branch utama `dumbflix-frontend-d5b.pages.dev` maka pada branch lainnya akan mendapatkan tambahan subdomain sesuai dengan nama branch tersebut. Contoh pada branch staging yg dibuat. 
+
+![image](https://user-images.githubusercontent.com/56806850/202992960-22ec9f93-2cf4-49bb-a4be-ce0a583e7183.png)
+
+makaa ketika anda melakukan pengeditan pada branch staging, cloudflare akan mengupdate perubahan tersebut pada branch staging dan akan di tampilkan pada halaman staging sendiri yaitu `
+staging.dumbflix-frontend-d5b.pages.dev`
+
+untuk mencobanya mari kita lakukan perubahan pada index.html di branch staging, tambahkan `(Staging)` pada title index.html 
+
+![image](https://user-images.githubusercontent.com/56806850/202993526-6ce376b2-8273-4f52-87ea-610369909a36.png)
+
+setelah deployment pada branch staging selesai maka perubahan pada web staging jg terjadi
+
+![image](https://user-images.githubusercontent.com/56806850/202994484-78b636c3-40be-4a21-9116-eb354288579d.png)
+
+tittle pada branch staging 
+
+![image](https://user-images.githubusercontent.com/56806850/202994542-359ea46c-c468-42fe-9024-3f296d08e31a.png)
+
+
+
+
+
 
