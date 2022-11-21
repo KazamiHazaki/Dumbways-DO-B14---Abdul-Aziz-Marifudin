@@ -49,7 +49,11 @@ jika sudah muncul success maka aplikasi sudah di deploy dengan link yg di bagika
 
 ketika di klik link tersebut website dari repository yg di fork akan muncul
 
-![image](https://user-images.githubusercontent.com/56806850/202984380-f393ea2e-fd46-48fe-aef0-a09ccb2a8e9a.png)
+![image](https://user-images.githubusercontent.com/56806850/202987173-bae4ece9-3f1d-4bbb-840e-7e2022edc155.png)
+
+
+![image](https://user-images.githubusercontent.com/56806850/202987058-7c954466-64ee-4eea-800d-5c121e77a989.png)
+
 
 pada title web tersebut masih menggunakan nama `Fadhil Darma` mari kita rubah menjadi nama kita.
 
