@@ -69,6 +69,53 @@ pada command di atas menggunakan pemisah delimiter atau `;` fungsi dari syhmbol 
 script di atas di awali dengan menggunakan command `sudo ` perintah tersebut akan membuat kita berubah langsung ke super user   ,
 kemudian di ikuti dengan `ufw allow 22` untuk membuka port 22 pada firewall kita, dan seterusna membuka port 80 dan 443. setelah itu firewall di aktifkan menggunakan perintah `ufw enable`, Di akhiri dengan perintah `exit` untuk keluar dari mode super user
 
-![image](https://user-images.githubusercontent.com/56806850/203569953-b96e8f67-686a-4999-9898-7c246efb1dbf.png)
+ketika di jalankan maka script akan muncul seperti berikut
+
+![image](https://user-images.githubusercontent.com/56806850/203571151-b8ba6991-06c6-470a-91cd-1648ce6e2051.png)
+
+Teks manipulation
+
+penggunaan cat 
+
+cat [namafile]
+
+pada command di bawah maka akan menunjukan isi teks dari sebuah file
+
+```shell
+cat file1
+```
+maka akan muncul teks yg ada di dalam file1
+
+![image](https://user-images.githubusercontent.com/56806850/203573500-4e79cea8-7583-42b9-86ab-a6c5477c475b.png)
+
+
+
+lalu bisa juga untuk membuat file baru
+
+```shell
+cat > file2
+```
+![image](https://user-images.githubusercontent.com/56806850/203574130-4154bf5a-7816-4cab-a951-05b76fead9c7.png)
+
+
+setelah menjalankan perintah tersebut ketik teks yg ingin di isi pada file2. Jika sudah maka bisa di save dengan menggunkan CTRL+C.
+
+
+penggunaan lain pada cat adalah untuk menggabungkan isi dari file1 dan file2 menjadi file baru
+
+```shell
+cat file1 file2 > file3
+```
+![image](https://user-images.githubusercontent.com/56806850/203574343-6439bcb2-f0ff-4e6c-a41b-403dae5a1f9d.png)
+
+Teks manipulasi berikutnya `grep` digunakan untuk mencari text pada file yg sudah dibuat 
+
+```shell
+grep Dumbways file1
+```
+![image](https://user-images.githubusercontent.com/56806850/203575116-9207b464-ddb7-4898-96dc-15034d170301.png)
+
+pada pencarian grep teks pencariannnya case-sensitive, jdi besar kecil teks yg dicari akan mempengaruhi hasilnya. penjelasan dari command di atas adalah mencari teks `Dumbways` pada file1
+
 
 
