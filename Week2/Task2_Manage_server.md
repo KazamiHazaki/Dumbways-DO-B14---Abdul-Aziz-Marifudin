@@ -73,7 +73,7 @@ ketika di jalankan maka script akan muncul seperti berikut
 
 ![image](https://user-images.githubusercontent.com/56806850/203571151-b8ba6991-06c6-470a-91cd-1648ce6e2051.png)
 
-Teks manipulation
+Teks manipulation "cat"
 
 penggunaan cat 
 
@@ -101,12 +101,16 @@ cat > file2
 setelah menjalankan perintah tersebut ketik teks yg ingin di isi pada file2. Jika sudah maka bisa di save dengan menggunkan CTRL+C.
 
 
-penggunaan lain pada cat adalah untuk menggabungkan isi dari file1 dan file2 menjadi file baru
 
 ```shell
 cat file1 file2 > file3
 ```
 ![image](https://user-images.githubusercontent.com/56806850/203574343-6439bcb2-f0ff-4e6c-a41b-403dae5a1f9d.png)
+
+
+penggunaan lain pada cat adalah untuk menggabungkan isi dari file1 dan file2 menjadi file baru
+
+Teks Manipulation "Grep"
 
 Teks manipulasi berikutnya `grep` digunakan untuk mencari text pada file yg sudah dibuat 
 
@@ -117,5 +121,83 @@ grep Dumbways file1
 
 pada pencarian grep teks pencariannnya case-sensitive, jdi besar kecil teks yg dicari akan mempengaruhi hasilnya. penjelasan dari command di atas adalah mencari teks `Dumbways` pada file1
 
+Menghitung kata dengan grep
+
+```shell
+grep -c Dumbways file1
+```
+![image](https://user-images.githubusercontent.com/56806850/203576263-d499fa50-f4e2-4e46-bdb6-9294fb8aae1c.png)
 
 
+pada cli di atas terdapat `-c` fungsinya adalah menghitung teks. lalu kata yg ingin dicari `Dumbways` dan file yg dipilih merupakan `file1`, dan menghasilkan output satu, karena memang hanya terdapat 1 teks Dumbways saja.
+
+
+Mencari teks pada seluruh folder
+
+```shell
+grep Dumbways *
+```
+
+![image](https://user-images.githubusercontent.com/56806850/203576702-9a72563d-0cf5-4418-8b4c-74adfe12a4a4.png)
+
+setelah teks yg ingin di cari (`Dumbways`) terdapat symbol `*` digunakan untuk mencari keseluruhan pada semua file pada direktori itu.
+
+Teks Manipulation "Echo"
+
+Echo di gunakan untuk mencetak pesan pada teks atau output langsung pada terminal
+
+Penggunaan Echo
+
+```shell
+echo "Hello Dumbways"
+```
+![image](https://user-images.githubusercontent.com/56806850/203577729-d474e36f-2f73-4a84-8e69-6bce2e4ba5a3.png)
+
+
+langsung menampilkan output Dumbways pada terminal 
+
+
+Untuk mencetak file menggunakan echo terdapat 2 cara 
+
+```shell
+echo "Abdul Aziz Marifudin" > file4
+```
+
+![image](https://user-images.githubusercontent.com/56806850/203596074-96319175-f2dd-403e-8a31-1ec9a0bcf5e6.png)
+
+
+Cara pertama menggunakan operator lebih besar dari. fungsi dari ini pada CLI echo adalah mencetak file dengan menulis ulang teks yg ada pada file, semisal terdapat teks lain pada file tersebut maka teks yg seblumnya akan tertulis ulang.
+
+```shell
+echo "Dumbways.co.id" >> file4
+```
+
+![image](https://user-images.githubusercontent.com/56806850/203596196-13df405f-1490-44b0-93b0-df15bb20c826.png)
+
+
+untuk cara kedua menggunakan `>>` pada symbol tersebut berfungsi untuk menambahkan text pada line baru di bawahnya.
+
+
+
+Replace Text
+
+Merubah text `Dumbways.co.id` pada seluruh file menjadi `bootcamp`
+
+![image](https://user-images.githubusercontent.com/56806850/203597902-0bb87dda-c931-4b92-9fe7-07ec189f9679.png)
+
+dengan menggunakan CLI `sed` maka kita bisa merubah text dengan sangat cepat
+
+```shell 
+sed 's/Dumbways.co.id/Bootcamp/g' file1 file2 file3 file4
+```
+
+![image](https://user-images.githubusercontent.com/56806850/203598474-46df722a-8183-4292-af3b-43b88a4d2ef7.png)
+
+
+sed adalah stream editor digunakan untuk memanipulasi teks dengan cli. pada cli di atas `s` pertama adalah operasi substitusi lalu `/` adalah delimiter atau pemisah, diikuti dengan teks yg akan dirubah kemudian di pisah dengan `/` dan teks perubahan kemudian pada akhir terdapat option `g` perintah untuk mengganti teks pada keseluruhan line teks. lalu pilih file akan di rubah.
+
+Challange 
+
+
+
+  
