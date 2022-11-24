@@ -229,3 +229,13 @@ jadi karena .conf nginx sudah di rubah maka ketika client mengakses halaman web 
 
 
 
+Untuk membuat load balancing tambahkan Upstream domaain pada confg nginx sebelumnya
+
+```shell
+upstream domain {
+    server 192.168.1.118:3000;
+    server 192.168.1.125:3000;
+}
+```
+
+
