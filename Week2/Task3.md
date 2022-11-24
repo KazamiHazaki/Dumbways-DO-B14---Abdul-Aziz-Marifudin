@@ -202,6 +202,30 @@ setelah itu masukan domain yg di atur pada .conf sebelumnya pada web client
 lalu kita coba domain tersebut di akses melalui web browser.
 
 
+![image](https://user-images.githubusercontent.com/56806850/203808053-7c44ed07-a42d-46fd-bb89-7f747aff11ab.png)
+
+jika sudah muncul seperti ini maka domain sudah bisa di akses melalui `webaziz.xyz` pada client 
+
+
+maka setelah itu kita rubah pada conf nginx proxy pass di arahkan ke  web nodeJS.
+
+![image](https://user-images.githubusercontent.com/56806850/203808841-fbfbfa8a-93ae-49db-a702-453ac3692518.png)
+
+nah lalu kita bisa langsung bisa mengakses web server nodeJS
+
+![image](https://user-images.githubusercontent.com/56806850/203809009-be215d54-4017-4186-93c3-6e6d88d29c37.png)
+
+
+
+lalu kita kita lihat IP yg digunakan pada  domain.xyz menggunakan ping pada client
+
+![image](https://user-images.githubusercontent.com/56806850/203809478-ff28da05-c8ed-461e-a1e3-d3124e2bfab6.png)
+
+disitu menunjukan IP yg di gunakan webaziz.xyz adalah 192.168.1.118 dimana IP tersebut adalah IP server nginx
+
+![image](https://user-images.githubusercontent.com/56806850/203810407-8e3af9c2-1981-4a63-a0ef-d422bd955483.png)
+
+jadi karena .conf nginx sudah di rubah maka ketika client mengakses halaman web webaziz.xyz nginx akan mengarahkan langsung ke server nodeJS yaitu `192.168.1.125:3000`
 
 
 
