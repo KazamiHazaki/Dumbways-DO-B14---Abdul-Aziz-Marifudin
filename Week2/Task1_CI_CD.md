@@ -1,3 +1,6 @@
+CI/CD adalah
+Cointinous Integration adalah proses trial dan error pengujian secara otomatis dan cepat tiap ada perubahan pada repositori project, dan untuk Continous Delivery merupakan hasil yang sudah jadi dari CI, secara otomatis akan di deploy .
+
 Fork Dumbflix Repository 
 
 Buka halaman `https://github.com/dumbwaysdev/dumbflix-frontend` pada bagian ujung sebelah kanan ada tombol bernama fork, kemudain tekan tombol tersebut.
