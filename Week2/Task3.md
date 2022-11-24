@@ -1,3 +1,8 @@
+Web Server 
+merupakan aplikasi yg menjembatani permintaan HTTP dan HTTPS dari server ke client
+
+
+
 Mempersiapkan Nginx Server dan Node Js Pada 2 vm berbeda
 
 Menginstall Nginx pada VM 
