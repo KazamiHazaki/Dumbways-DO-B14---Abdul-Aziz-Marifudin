@@ -130,5 +130,78 @@ alur nya adalah
 - kemudian server 192.168.1.125 mengirim kembali permintaan client ke pada Server Proxy Nginx
 - Nginx memberikan request client tampilan website wayshub.co.id
 
+pertama kita lakukan pengaturna reverse proxy pada server nginx
 
-         
+masuk ke folder nginx 
+
+```shell
+sudo cd /etc/nginx
+```
+
+lalu buat folder baru 
+
+```shell
+sudo mkdir wayshub
+```
+kemudian masuk ke direktori tersebut dan  buat  file conf baru dengan nama `wayshub_proxy.conf`
+
+```shell
+sudo nano wayshub_proxy.conf
+```
+dan isi pada file conf 
+
+```shell
+server { 
+    server_name mydomain.xyz; 
+  
+    location / { 
+             proxy_pass http://127.0.0.1:3000;
+    }
+}
+```
+dan tambahkan folder yang sudah di buat pada file configurasi nginx
+buka file config nginx
+
+```shell
+sudo nano nginx.conf
+```
+dan tambahkan di bawah `include /etc/nginx/sites-enabled/*;` setelah masuk ke text editor nano tekan `ctrl + w`
+cari teks `include /etc/nginx/sites-enabled/*;` tuliskan direktori wayshub yg sudah di buat.
+
+![image](https://user-images.githubusercontent.com/56806850/203805639-32fdb79c-1dfe-4669-9968-4ccd8333e609.png)
+
+
+kemudai test configurasi yg sudah di tambahkan direktori baru dengan 
+
+```shell
+sudo nginx -t
+```
+
+![image](https://user-images.githubusercontent.com/56806850/203805942-f6d61f75-473c-4bf0-8abb-8757ac611a9a.png)
+
+
+kemudian restart nginx untuk mengaplikasikan perubahan.
+
+```shell
+sudo systemctl restart nginx
+```
+
+lalu tambahkan domain yg di buat pada conf baru kita
+edit pada file hosts
+
+```shell
+sudo nano /etc/hosts
+```
+![image](https://user-images.githubusercontent.com/56806850/203806903-8f500063-3607-4fa5-98da-cc4fef782ec8.png)
+
+setelah itu masukan domain yg di atur pada .conf sebelumnya pada web client 
+
+
+![image](https://user-images.githubusercontent.com/56806850/203807823-65fc70bc-afa3-45bf-9f17-0b94f7096042.png)
+
+lalu kita coba domain tersebut di akses melalui web browser.
+
+
+
+
+
