@@ -196,6 +196,16 @@ sed 's/Dumbways.co.id/Bootcamp/g' file1 file2 file3 file4
 
 sed adalah stream editor digunakan untuk memanipulasi teks dengan cli. pada cli di atas `s` pertama adalah operasi substitusi lalu `/` adalah delimiter atau pemisah, diikuti dengan teks yg akan dirubah kemudian di pisah dengan `/` dan teks perubahan kemudian pada akhir terdapat option `g` perintah untuk mengganti teks pada keseluruhan line teks. lalu pilih file akan di rubah.
 
+
+
+contoh aplikasi monitoring salah satunya adalah HTOP, merupakan aplikasi monitoring resource komputer server secara realtime. Di akses secara langsung pada server tersebut
+
+![image](https://user-images.githubusercontent.com/56806850/203822678-c8c835c4-ffd1-43c8-9668-e3a50f7f139e.png)
+
+pada aplikasi monitoring features yang terdapat adalah mengganti tampilan htop, filter aplikasi, pencarian aplikasi, dan menghentikan aplikasi secara paksa.
+
+
+
 Challange 
 
 
