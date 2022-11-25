@@ -234,13 +234,51 @@ jadi karena .conf nginx sudah di rubah maka ketika client mengakses halaman web 
 
 
 
-Untuk membuat load balancing tambahkan Upstream domaain pada confg nginx sebelumnya
+Untuk membuat load balancing tambahkan Upstream domaain pada confg nginx sebelumnya dan ubah proxy pass menjadi `backend` sesuai dengan nama upstreamnya
 
 ```shell
-upstream domain {
+upstream backend {
     server 192.168.1.118:3000;
     server 192.168.1.125:3000;
 }
+server {
+    server_name webaziz.xyz;
+
+    location / {
+             proxy_pass http://backend;
+    }
+}
 ```
+
+jadi ketika kita mengakses webaziz.xyz reverseproxy akan mengarahkan langsung ke `http://backend` di mana ketika salah satu server mati/tidak bisa di akses maka server 1 nya akan membackup web app.
+
+setelah melakukan perubahan pada conf nginx maka test conf nginx dengan `sudo nginx -t`
+lalu restart nginx `sudo systemctl restart nginx`.
+
+
+![image](https://user-images.githubusercontent.com/56806850/203892483-da050c7c-05b9-4ac3-9123-55c525c51c92.png)
+
+jadi pada ke 2 server sudah menjalankan web app yang sama 
+
+sehingga kita bisa mencoba mengakses domain webaziz.xyz
+
+sebelumnya pada ke 2 web app sudah saya tandai pada title nya saya beri ke 2 IP pada tiap server.
+
+jadi untuk gambar web yg di akses di bawah menunjukan mengakses ke Server dengan IP `192.168.1.125`
+
+![image](https://user-images.githubusercontent.com/56806850/203892561-3580cd75-3365-433d-8925-b729c73fa56e.png)
+
+
+lalu kita coba matikan web server pada IP `192.168.1.125`
+
+![image](https://user-images.githubusercontent.com/56806850/203892751-7e3c79ff-ddde-4385-a0ab-ea2dabeb4d70.png)
+
+server 1.125 sudah di matikan coba untuk merefresh halaman website
+
+
+![image](https://user-images.githubusercontent.com/56806850/203892805-501d2a8e-6c71-4e18-b116-2d5b2e6a44cf.png)
+
+
+maka akan muncul dengan tittle yg berbeda, karena web tersebut di akses melalui server 192.168.1.118
 
 
